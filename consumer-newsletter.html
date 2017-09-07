@@ -594,18 +594,15 @@
     </tbody>
 </table>
 
+{{#if itemDescription1.isEnabled}}
 <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width:100%;">
     <tbody class="mcnTextBlockOuter">
         <tr>
             <td valign="top" class="mcnTextBlockInner" style="padding-top:9px;">
                 <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
                     <tbody><tr>
-
                         <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
-
-                            <h2 class="null">Burnt City Collaborates With The Art Institute of Chicago on <em>Artist As Alchemist</em></h2>
-														<p style="text-align: left;">It’s not everyday you find yourself collaborating with one of the country’s premier cultural institutions on, wait for it, a beer. But for&nbsp;<strong>Burnt City Brewing</strong>, that’s exactly what happened for their latest release, Artist as Alchemist Golden Session IPA.</p>
-
+														<p style="text-align: left;">{{{itemDescription1.value}}}</p>
                         </td>
                     </tr>
                 </tbody></table>
@@ -613,6 +610,7 @@
         </tr>
     </tbody>
 </table>
+{{/if}}
 
 <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnButtonBlock" style="min-width:100%;">
     <tbody class="mcnButtonBlockOuter">
