@@ -552,6 +552,7 @@
 </table>
 {{/if}}
 
+{{#if itemImage1.isEnabled}}
 <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock" style="min-width:100%;">
     <tbody class="mcnImageBlockOuter">
             <tr>
@@ -560,9 +561,9 @@
                         <tbody><tr>
                             <td class="mcnImageContent" valign="top" style="padding-right: 0px; padding-left: 0px; padding-top: 0; padding-bottom: 0; text-align:center;">
 
-                                    <a href="http://www.lakeshorebev.com/blog/burnt-city-brewing-artist-as-alchemist/" title="" class="" target="_blank">
-                                        <img align="center" alt="" src="https://gallery.mailchimp.com/f2c55751eba8c8a6bb94f9133/images/742cec6b-57d3-4814-9d28-213d9f7b09b2.jpg" width="599.9999771118164" style="max-width:800px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
-                                    </a>
+                                    {{#if itemImage1.linkUrl}}<a href="{{itemImage1.linkUrl}}" title="" class="" target="_blank">{{/if}}
+                                        <img align="center" alt="{{itemImage1.altText}}" src="{{itemImage1.srcUrl}}" width="599.9999771118164" style="max-width:800px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
+                                    {{#if itemImage1.linkUrl}}</a>{{/if}}
 
                             </td>
                         </tr>
@@ -571,6 +572,9 @@
             </tr>
     </tbody>
 </table>
+{{/if}}
+
+
 <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width:100%;">
     <tbody class="mcnTextBlockOuter">
         <tr>
