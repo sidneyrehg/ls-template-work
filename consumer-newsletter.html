@@ -372,9 +372,6 @@
 
 }</style></head>
     <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
-        <!--*|IF:MC_PREVIEW_TEXT|*-->
-        <!--[if !gte mso 9]><!----><span class="mcnPreviewText" style="display:none; font-size:0px; line-height:0px; max-height:0px; max-width:0px; opacity:0; overflow:hidden; visibility:hidden; mso-hide:all;">*|MC_PREVIEW_TEXT|*</span><!--<![endif]-->
-        <!--*|END:IF|*-->
         <center>
             <table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
                 <tr>
@@ -427,7 +424,7 @@
 
                         <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
 
-                            <div style="text-align: center;"><span style="font-size:8px">Plus, Upland throws a sour bottle party like you've never seen and Brooklyn takes us on a tour of The 606.</span></div>
+                            <div style="text-align: center;"><span style="font-size:8px">{{preheaderText.value}}</span></div>
 
                         </td>
                     </tr>
@@ -473,11 +470,6 @@
                     <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0" class="mcnImageContentContainer">
                         <tbody><tr>
                             <td class="mcnImageContent" valign="top" style="padding-right: 0px; padding-left: 0px; padding-top: 0; padding-bottom: 0;">
-
-                                    <a href="http://www.lakeshorebev.com" title="" class="" target="_blank">
-                                        <img align="left" alt="Lakeshore Beverage" src="https://gallery.mailchimp.com/f2c55751eba8c8a6bb94f9133/images/1626fd7d-50cb-4ed4-84de-5b08cb44203c.jpg" width="600" style="max-width:600px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
-                                    </a>
-
                             </td>
                         </tr>
                     </tbody></table>
@@ -507,36 +499,45 @@
                                                         <td align="center" valign="top">
                                                             <table border="0" cellpadding="0" cellspacing="0" width="100%" id="bodyBackground">
                                                                 <tr>
-                                                                    <td valign="top" class="bodyContainer"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock" style="min-width:100%;">
+                                                                  <td valign="top" class="bodyContainer"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock" style="min-width:100%;">
+
     <tbody class="mcnImageBlockOuter">
             <tr>
                 <td valign="top" style="padding:0px" class="mcnImageBlockInner">
+                  <!-- Start Header -->
+                  {{#if headerImage.isEnabled}}
                     <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0" class="mcnImageContentContainer" style="min-width:100%;">
                         <tbody><tr>
                             <td class="mcnImageContent" valign="top" style="padding-right: 0px; padding-left: 0px; padding-top: 0; padding-bottom: 0; text-align:center;">
-
-                                    <a href="http://www.lakeshorebev.com/upland-sours-bottle-party" title="" class="" target="_blank">
-                                        <img align="center" alt="" src="https://gallery.mailchimp.com/f2c55751eba8c8a6bb94f9133/images/006751bd-a1ad-48c7-a18e-6ccb9eb1ebc5.jpg" width="600" style="max-width:800px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
-                                    </a>
-
+                              {{#if headerImage.linkUrl}}
+                                    <a href="{{headerImage.linkUrl}}" title="" class="" target="_blank">
+                              {{/if}}
+                                        <img align="center" alt="{{headerImage.altText}}" src="{{headerImage.srcUrl}}" width="600" style="max-width:800px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
+                                    {{#if headerImage.linkUrl}}</a>{{/if}}
                             </td>
                         </tr>
-                    </tbody></table>
+                      </tbody></table>
+                    {{else}}
+                    <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0" class="mcnImageContentContainer" style="min-width:100%;">
+                        <tbody><tr>
+                            <td class="mcnImageContent" valign="top" style="padding-right: 0px; padding-left: 0px; padding-top: 0; padding-bottom: 0; text-align:center;">
+                                    <a href="https://www.handfamilycompanies.com/lakeshore-beverage" title="" class="" target="_blank">
+                                        <img align="center" alt="Lakeshore Beverage" src="http://files.secondstreetmedia.com/support/sidneyr/1626fd7d-50cb-4ed4-84de-5b08cb44203c.jpg" width="600" style="max-width:800px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
+                                      </a>
+                            </td>
+                        </tr>
+                      </tbody></table>
+                    {{/if}}
+                    <!-- End Header -->
                 </td>
             </tr>
     </tbody>
+
+
 </table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width:100%;">
     <tbody class="mcnTextBlockOuter">
         <tr>
             <td valign="top" class="mcnTextBlockInner" style="padding-top:9px;">
-              	<!--[if mso]>
-				<table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
-				<tr>
-				<![endif]-->
-
-				<!--[if mso]>
-				<td valign="top" width="600" style="width:600px;">
-				<![endif]-->
                 <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
                     <tbody><tr>
 
@@ -546,14 +547,6 @@
                         </td>
                     </tr>
                 </tbody></table>
-				<!--[if mso]>
-				</td>
-				<![endif]-->
-
-				<!--[if mso]>
-				</tr>
-				</table>
-				<![endif]-->
             </td>
         </tr>
     </tbody>
@@ -1454,12 +1447,6 @@ Tickets: $20</div>
                                                             <td align="left" valign="middle" style="padding-top:5px; padding-right:9px; padding-bottom:5px; padding-left:9px;">
                                                                 <table align="left" border="0" cellpadding="0" cellspacing="0" width="">
                                                                     <tbody><tr>
-                                                                        <td align="center" valign="middle" width="24" class="mcnShareIconContent">
-                                                                            <a href="http://www.facebook.com/sharer/sharer.php?u=*|URL:ARCHIVE_LINK_SHORT|*" target="_blank"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/light-facebook-48.png" style="display:block;" height="24" width="24" class=""></a>
-                                                                        </td>
-                                                                        <td align="left" valign="middle" class="mcnShareTextContent" style="padding-left:5px;">
-                                                                            <a href="http://www.facebook.com/sharer/sharer.php?u=*|URL:ARCHIVE_LINK_SHORT|*" target="" style="color: #333333;font-family: Arial;font-size: 14px;font-weight: normal;line-height: 100%;text-align: center;text-decoration: none;">Share</a>
-                                                                        </td>
                                                                     </tr>
                                                                 </tbody></table>
                                                             </td>
@@ -1483,12 +1470,6 @@ Tickets: $20</div>
                                                             <td align="left" valign="middle" style="padding-top:5px; padding-right:9px; padding-bottom:5px; padding-left:9px;">
                                                                 <table align="left" border="0" cellpadding="0" cellspacing="0" width="">
                                                                     <tbody><tr>
-                                                                        <td align="center" valign="middle" width="24" class="mcnShareIconContent">
-                                                                            <a href="http://twitter.com/intent/tweet?text=*|URL:MC_SUBJECT|*: *|URL:ARCHIVE_LINK_SHORT|*" target="_blank"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/light-twitter-48.png" style="display:block;" height="24" width="24" class=""></a>
-                                                                        </td>
-                                                                        <td align="left" valign="middle" class="mcnShareTextContent" style="padding-left:5px;">
-                                                                            <a href="http://twitter.com/intent/tweet?text=*|URL:MC_SUBJECT|*: *|URL:ARCHIVE_LINK_SHORT|*" target="" style="color: #333333;font-family: Arial;font-size: 14px;font-weight: normal;line-height: 100%;text-align: center;text-decoration: none;">Tweet</a>
-                                                                        </td>
                                                                     </tr>
                                                                 </tbody></table>
                                                             </td>
@@ -1512,12 +1493,6 @@ Tickets: $20</div>
                                                             <td align="left" valign="middle" style="padding-top:5px; padding-right:9px; padding-bottom:5px; padding-left:9px;">
                                                                 <table align="left" border="0" cellpadding="0" cellspacing="0" width="">
                                                                     <tbody><tr>
-                                                                        <td align="center" valign="middle" width="24" class="mcnShareIconContent">
-                                                                            <a href="*|FORWARD|*" target="_blank"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/light-forwardtofriend-48.png" style="display:block;" height="24" width="24" class=""></a>
-                                                                        </td>
-                                                                        <td align="left" valign="middle" class="mcnShareTextContent" style="padding-left:5px;">
-                                                                            <a href="*|FORWARD|*" target="" style="color: #333333;font-family: Arial;font-size: 14px;font-weight: normal;line-height: 100%;text-align: center;text-decoration: none;">Forward</a>
-                                                                        </td>
                                                                     </tr>
                                                                 </tbody></table>
                                                             </td>
@@ -1702,9 +1677,6 @@ Tickets: $20</div>
                     <tbody><tr>
 
                         <td valign="top" class="mcnTextContent" style="padding: 9px 18px 9px 0px;color: #BA8E41;">
-
-                            <div style="text-align: right;"><a href="*|ARCHIVE|*" target="_blank"><span style="color:#c39d5f">View this email in your browser</span></a></div>
-
                         </td>
                     </tr>
                 </tbody></table>
@@ -1722,15 +1694,11 @@ Tickets: $20</div>
 
                         <td valign="top" class="mcnTextContent" style="padding-top:9px; padding-right: 18px; padding-bottom: 9px; padding-left: 18px;">
 
-                            <em>Copyright © *|CURRENT_YEAR|* *|LIST:COMPANY|*, All rights reserved.</em>
+                            <em></em>
 <br>
-*|IFNOT:ARCHIVE_PAGE|*
-    *|LIST:DESCRIPTION|*
     <br>
     <br>
-    <strong>Our mailing address is:</strong>
     <br>
-    *|HTML:LIST_ADDRESS_HTML|* *|END:IF|*
     <br>
     <br>
       {{System.OptOutText}}
