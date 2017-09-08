@@ -670,6 +670,318 @@
 {{/ifAny}}
 <!-- End Content Row 1 -->
 
+<!-- Begin Content Row 2 -->
+{{#ifAny itemImage2.isEnabled itemHeadline2.isEnabled itemDescription2.isEnabled itemButton2.isEnabled}}
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width:100%;">
+    <tbody class="mcnTextBlockOuter">
+        <tr>
+            <td valign="top" class="mcnTextBlockInner" style="padding-top:9px;">
+                <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
+                    <tbody><tr>
+
+                        <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+{{#if itemHeadline2.isEnabled}}
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnButtonBlock" style="min-width:100%;">
+    <tbody class="mcnButtonBlockOuter">
+        <tr>
+            <td style="padding-top:0; padding-right:18px; padding-bottom:18px; padding-left:18px;" valign="top" align="center" class="mcnButtonBlockInner">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnButtonContentContainer" style="border-collapse: separate !important;border: 2px none #404040;border-radius: 2px;background-color: #404040;">
+                    <tbody>
+                        <tr>
+                            <td align="center" valign="middle" class="mcnButtonContent" style="font-family: Verdana, Geneva, sans-serif; font-size: 16px; padding: 15px; font-weight: bold; letter-spacing: normal; line-height: 100%; text-align: center; text-decoration: none; color: #FFF;">
+                                {{#if itemHeadline2.linkUrl}}<a class="mcnButton " title="{{itemHeadline2.value}}" href="{{itemHeadline2.linkUrl}}" target="_self" style="font-weight: bold; letter-spacing: normal; line-height: 100%; text-align: center; text-decoration: none; color: #FFF;">{{/if}}{{itemHeadline2.value}}{{#if itemHeadline2.linkUrl}}</a>{{/if}}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+{{/if}}
+
+{{#if itemImage2.isEnabled}}
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock" style="min-width:100%;">
+    <tbody class="mcnImageBlockOuter">
+            <tr>
+                <td valign="top" style="padding:0px" class="mcnImageBlockInner">
+                    <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0" class="mcnImageContentContainer" style="min-width:100%;">
+                        <tbody><tr>
+                            <td class="mcnImageContent" valign="top" style="padding-right: 0px; padding-left: 0px; padding-top: 0; padding-bottom: 0; text-align:center;">
+
+                                    {{#if itemImage2.linkUrl}}<a href="{{itemImage2.linkUrl}}" title="" class="" target="_blank">{{/if}}
+                                        <img align="center" alt="{{itemImage2.altText}}" src="{{itemImage2.srcUrl}}" width="599.9999771118164" style="max-width:800px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
+                                    {{#if itemImage2.linkUrl}}</a>{{/if}}
+
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
+    </tbody>
+</table>
+{{/if}}
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width:100%;">
+    <tbody class="mcnTextBlockOuter">
+        <tr>
+            <td valign="top" class="mcnTextBlockInner" style="padding-top:9px;">
+                <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
+                    <tbody><tr>
+
+                        <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
+
+
+                        </td>
+                    </tr>
+                </tbody>
+							</table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+{{#if itemDescription2.isEnabled}}
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width:100%;">
+    <tbody class="mcnTextBlockOuter">
+        <tr>
+            <td valign="top" class="mcnTextBlockInner" style="padding-top:9px;">
+                <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
+                    <tbody><tr>
+                        <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
+														<p style="text-align: left;">{{{itemDescription2.value}}}</p>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+{{/if}}
+
+{{#if itemButton2.isEnabled}}
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnButtonBlock" style="min-width:100%;">
+    <tbody class="mcnButtonBlockOuter">
+        <tr>
+            <td style="padding-top:0; padding-right:18px; padding-bottom:18px; padding-left:18px;" valign="top" align="center" class="mcnButtonBlockInner">
+                <table border="0" cellpadding="0" cellspacing="0" class="mcnButtonContentContainer" style="border-collapse: separate !important;border: 2px solid #BA8E41;border-radius: 2px;background-color: #C89641;">
+                    <tbody>
+                        <tr>
+                            <td align="center" valign="middle" class="mcnButtonContent" style="font-family: Verdana, Geneva, sans-serif; font-size: 16px; padding: 16px; font-weight: normal;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none; color: #FFFFFF;">
+                                {{#if itemButton2.linkUrl}}<a class="mcnButton " title="{{itemButton2.value}}" href="{{itemButton2.linkUrl}}" target="_self" style="font-weight: normal;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">{{/if}}
+																	{{itemButton2.value}}
+																{{#if itemButton2.linkUrl}}</a>{{/if}}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+{{/if}}
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnDividerBlock" style="min-width:100%;">
+    <tbody class="mcnDividerBlockOuter">
+        <tr>
+            <td class="mcnDividerBlockInner" style="min-width:100%; padding:18px;">
+                <table class="mcnDividerContent" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;border-top: 2px dotted #EAEAEA;">
+                    <tbody><tr>
+                        <td>
+                            <span></span>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width:100%;">
+    <tbody class="mcnTextBlockOuter">
+        <tr>
+            <td valign="top" class="mcnTextBlockInner" style="padding-top:9px;">
+                <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
+                    <tbody><tr>
+
+                        <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
+
+
+                        </td>
+                    </tr>
+                </tbody>
+							</table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+{{/ifAny}}
+<!-- End Content Row 2 -->
+
+<!-- Begin Content Row 3 -->
+{{#ifAny itemImage3.isEnabled itemHeadline3.isEnabled itemDescription3.isEnabled itemButton3.isEnabled}}
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width:100%;">
+    <tbody class="mcnTextBlockOuter">
+        <tr>
+            <td valign="top" class="mcnTextBlockInner" style="padding-top:9px;">
+                <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
+                    <tbody><tr>
+
+                        <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+{{#if itemHeadline3.isEnabled}}
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnButtonBlock" style="min-width:100%;">
+    <tbody class="mcnButtonBlockOuter">
+        <tr>
+            <td style="padding-top:0; padding-right:18px; padding-bottom:18px; padding-left:18px;" valign="top" align="center" class="mcnButtonBlockInner">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnButtonContentContainer" style="border-collapse: separate !important;border: 2px none #404040;border-radius: 2px;background-color: #404040;">
+                    <tbody>
+                        <tr>
+                            <td align="center" valign="middle" class="mcnButtonContent" style="font-family: Verdana, Geneva, sans-serif; font-size: 16px; padding: 15px; font-weight: bold; letter-spacing: normal; line-height: 100%; text-align: center; text-decoration: none; color: #FFF;">
+                                {{#if itemHeadline3.linkUrl}}<a class="mcnButton " title="{{itemHeadline3.value}}" href="{{itemHeadline3.linkUrl}}" target="_self" style="font-weight: bold; letter-spacing: normal; line-height: 100%; text-align: center; text-decoration: none; color: #FFF;">{{/if}}{{itemHeadline3.value}}{{#if itemHeadline3.linkUrl}}</a>{{/if}}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+{{/if}}
+
+{{#if itemImage3.isEnabled}}
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock" style="min-width:100%;">
+    <tbody class="mcnImageBlockOuter">
+            <tr>
+                <td valign="top" style="padding:0px" class="mcnImageBlockInner">
+                    <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0" class="mcnImageContentContainer" style="min-width:100%;">
+                        <tbody><tr>
+                            <td class="mcnImageContent" valign="top" style="padding-right: 0px; padding-left: 0px; padding-top: 0; padding-bottom: 0; text-align:center;">
+
+                                    {{#if itemImage3.linkUrl}}<a href="{{itemImage3.linkUrl}}" title="" class="" target="_blank">{{/if}}
+                                        <img align="center" alt="{{itemImage3.altText}}" src="{{itemImage3.srcUrl}}" width="599.9999771118164" style="max-width:800px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
+                                    {{#if itemImage3.linkUrl}}</a>{{/if}}
+
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
+    </tbody>
+</table>
+{{/if}}
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width:100%;">
+    <tbody class="mcnTextBlockOuter">
+        <tr>
+            <td valign="top" class="mcnTextBlockInner" style="padding-top:9px;">
+                <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
+                    <tbody><tr>
+
+                        <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
+
+
+                        </td>
+                    </tr>
+                </tbody>
+							</table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+{{#if itemDescription3.isEnabled}}
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width:100%;">
+    <tbody class="mcnTextBlockOuter">
+        <tr>
+            <td valign="top" class="mcnTextBlockInner" style="padding-top:9px;">
+                <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
+                    <tbody><tr>
+                        <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
+														<p style="text-align: left;">{{{itemDescription3.value}}}</p>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+{{/if}}
+
+{{#if itemButton3.isEnabled}}
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnButtonBlock" style="min-width:100%;">
+    <tbody class="mcnButtonBlockOuter">
+        <tr>
+            <td style="padding-top:0; padding-right:18px; padding-bottom:18px; padding-left:18px;" valign="top" align="center" class="mcnButtonBlockInner">
+                <table border="0" cellpadding="0" cellspacing="0" class="mcnButtonContentContainer" style="border-collapse: separate !important;border: 2px solid #BA8E41;border-radius: 2px;background-color: #C89641;">
+                    <tbody>
+                        <tr>
+                            <td align="center" valign="middle" class="mcnButtonContent" style="font-family: Verdana, Geneva, sans-serif; font-size: 16px; padding: 16px; font-weight: normal;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none; color: #FFFFFF;">
+                                {{#if itemButton3.linkUrl}}<a class="mcnButton " title="{{itemButton3.value}}" href="{{itemButton3.linkUrl}}" target="_self" style="font-weight: normal;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">{{/if}}
+																	{{itemButton3.value}}
+																{{#if itemButton3.linkUrl}}</a>{{/if}}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+{{/if}}
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnDividerBlock" style="min-width:100%;">
+    <tbody class="mcnDividerBlockOuter">
+        <tr>
+            <td class="mcnDividerBlockInner" style="min-width:100%; padding:18px;">
+                <table class="mcnDividerContent" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;border-top: 2px dotted #EAEAEA;">
+                    <tbody><tr>
+                        <td>
+                            <span></span>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width:100%;">
+    <tbody class="mcnTextBlockOuter">
+        <tr>
+            <td valign="top" class="mcnTextBlockInner" style="padding-top:9px;">
+                <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
+                    <tbody><tr>
+
+                        <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
+
+
+                        </td>
+                    </tr>
+                </tbody>
+							</table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+{{/ifAny}}
+<!-- End Content Row 3 -->
+
 
 <!-- Begin Bottom Content -->
 
