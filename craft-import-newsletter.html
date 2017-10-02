@@ -551,26 +551,29 @@
 <!-- End Featured Brewery 1 -->
 
 <!-- Featured Brewery 2 -->
-<table align="right" border="0" cellpadding="0" cellspacing="0" class="mcnCaptionBottomContent" width="282">
-    <tbody><tr>
-        <td class="mcnCaptionBottomImageContent" align="center" valign="top" style="padding:0 9px 9px 9px;">
-
-
-
-            <img alt="" src="https://gallery.mailchimp.com/f2c55751eba8c8a6bb94f9133/images/0bc3f5f8-36c1-4309-8504-e2e7affbd89d.png" width="200" style="max-width:200px;" class="mcnImage">
-
-
-        </td>
-    </tr>
-    <tr>
-        <td class="mcnTextContent" valign="top" style="padding:0 9px 0 9px;" width="264">
-            <div style="text-align: center;"><strong>Goose Island</strong></div>
-
-<div style="text-align: left;">Lots of new beers from Goose including Juicy Double IPA, Imperial 49 IPA, Cooper Project #2 and Fest Bier (Oktoberfest).</div>
-
-        </td>
-    </tr>
-</tbody></table>
+{{#ifAny itemImage2.isEnabled itemHeadline2.isEnabled itemDescription2.isEnabled itemButton2.isEnabled}}
+  <table align="right" border="0" cellpadding="0" cellspacing="0" class="mcnCaptionBottomContent" width="282">
+      <tbody><tr>
+          <td class="mcnCaptionBottomImageContent" align="center" valign="top" style="padding:0 9px 9px 9px;">
+            {{#if itemImage2.isEnabled}}
+              {{#if itemImage2.linkUrl}}<a href="{{itemImage2.linkUrl}}">{{/if}}
+                <img alt="{{itemImage2.altText}}" src="{{itemImage2.srcUrl}}" width="200" style="max-width:200px;" class="mcnImage">
+              {{#if itemImage2.linkUrl}}</a>{{/if}}
+            {{/if}}
+          </td>
+      </tr>
+      <tr>
+          <td class="mcnTextContent" valign="top" style="padding:0 9px 0 9px;" width="264">
+            {{#if itemHeadline2.isEnabled}}
+                <div style="text-align: center;"><strong>{{itemHeadline2.value}}</strong></div>
+            {{/if}}
+            {{#if itemDescription2.isEnabled}}
+              <div style="text-align: left;">{{{itemDescription2.value}}}</div>
+            {{/if}}
+          </td>
+      </tr>
+  </tbody></table>
+{{/ifAny}}
 <!-- End Featured Brewery 2 -->
 
             </td>
@@ -582,49 +585,55 @@
             <td class="mcnCaptionBlockInner" valign="top" style="padding:9px;">
 
 <!-- Featured Brewery 3 -->
-<table align="left" border="0" cellpadding="0" cellspacing="0" class="mcnCaptionBottomContent" width="282">
-    <tbody><tr>
-        <td class="mcnCaptionBottomImageContent" align="center" valign="top" style="padding:0 9px 9px 9px;">
-
-
-
-            <img alt="" src="https://gallery.mailchimp.com/f2c55751eba8c8a6bb94f9133/images/ff6ada04-145e-4196-af52-5be6e7313772.jpg" width="200" style="max-width:200px;" class="mcnImage">
-
-
-        </td>
-    </tr>
-    <tr>
-        <td class="mcnTextContent" valign="top" style="padding:0 9px 0 9px;" width="264">
-            <div style="text-align: center;"><strong>Founders Brewing</strong></div>
-
-<div style="text-align: left;">New beers from our friends at Founders include DKML, Green Zebra watermelon gose, and the return of Mosaic Promise.</div>
-
-        </td>
-    </tr>
-</tbody></table>
+{{#ifAny itemImage3.isEnabled itemHeadline3.isEnabled itemDescription3.isEnabled itemButton3.isEnabled}}
+  <table align="left" border="0" cellpadding="0" cellspacing="0" class="mcnCaptionBottomContent" width="282">
+      <tbody><tr>
+          <td class="mcnCaptionBottomImageContent" align="center" valign="top" style="padding:0 9px 9px 9px;">
+            {{#if itemImage3.isEnabled}}
+              {{#if itemImage3.linkUrl}}<a href="{{itemImage3.linkUrl}}">{{/if}}
+                <img alt="{{itemImage3.altText}}" src="{{itemImage3.srcUrl}}" width="200" style="max-width:200px;" class="mcnImage">
+              {{#if itemImage3.linkUrl}}</a>{{/if}}
+            {{/if}}
+          </td>
+      </tr>
+      <tr>
+          <td class="mcnTextContent" valign="top" style="padding:0 9px 0 9px;" width="264">
+            {{#if itemHeadline3.isEnabled}}
+                <div style="text-align: center;"><strong>{{itemHeadline3.value}}</strong></div>
+            {{/if}}
+            {{#if itemDescription3.isEnabled}}
+              <div style="text-align: left;">{{{itemDescription3.value}}}</div>
+            {{/if}}
+          </td>
+      </tr>
+  </tbody></table>
+{{/ifAny}}
 <!-- End Featured Brewery 3 -->
 
 <!-- Featured Brewery 4 -->
-<table align="right" border="0" cellpadding="0" cellspacing="0" class="mcnCaptionBottomContent" width="282">
-    <tbody><tr>
-        <td class="mcnCaptionBottomImageContent" align="center" valign="top" style="padding:0 9px 9px 9px;">
-
-
-
-            <img alt="" src="https://gallery.mailchimp.com/f2c55751eba8c8a6bb94f9133/images/38b33702-3531-4f26-94d3-365816d4b9d4.png" width="200" style="max-width:200px;" class="mcnImage">
-
-
-        </td>
-    </tr>
-    <tr>
-        <td class="mcnTextContent" valign="top" style="padding:0 9px 0 9px;" width="264">
-            <div style="text-align: center;"><strong>Urban Chestnut Brewing</strong></div>
-
-<div style="text-align: left;">Oktoberfest is upon us and Urban Chestnut has what many other breweries cannot claim: a true Bavarian Brewmaster who knows a thing or two about German beer.</div>
-
-        </td>
-    </tr>
-</tbody></table>
+{{#ifAny itemImage4.isEnabled itemHeadline4.isEnabled itemDescription4.isEnabled itemButton4.isEnabled}}
+  <table align="right" border="0" cellpadding="0" cellspacing="0" class="mcnCaptionBottomContent" width="282">
+      <tbody><tr>
+          <td class="mcnCaptionBottomImageContent" align="center" valign="top" style="padding:0 9px 9px 9px;">
+            {{#if itemImage4.isEnabled}}
+              {{#if itemImage4.linkUrl}}<a href="{{itemImage4.linkUrl}}">{{/if}}
+                <img alt="{{itemImage4.altText}}" src="{{itemImage4.srcUrl}}" width="200" style="max-width:200px;" class="mcnImage">
+              {{#if itemImage4.linkUrl}}</a>{{/if}}
+            {{/if}}
+          </td>
+      </tr>
+      <tr>
+          <td class="mcnTextContent" valign="top" style="padding:0 9px 0 9px;" width="264">
+            {{#if itemHeadline4.isEnabled}}
+                <div style="text-align: center;"><strong>{{itemHeadline4.value}}</strong></div>
+            {{/if}}
+            {{#if itemDescription4.isEnabled}}
+              <div style="text-align: left;">{{{itemDescription4.value}}}</div>
+            {{/if}}
+          </td>
+      </tr>
+  </tbody></table>
+{{/ifAny}}
 <!-- End Featured Brewery 4 -->
 
             </td>
