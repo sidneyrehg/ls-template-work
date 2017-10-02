@@ -524,28 +524,33 @@
         <tr>
             <td class="mcnCaptionBlockInner" valign="top" style="padding:9px;">
 
+<!-- Featured Brewery 1 -->
+{{#ifAny itemImage1.isEnabled itemHeadline1.isEnabled itemDescription1.isEnabled itemButton1.isEnabled}}
+  <table align="left" border="0" cellpadding="0" cellspacing="0" class="mcnCaptionBottomContent" width="282">
+      <tbody><tr>
+          <td class="mcnCaptionBottomImageContent" align="center" valign="top" style="padding:0 9px 9px 9px;">
+            {{#if itemImage1.isEnabled}}
+              {{#if itemImage1.linkUrl}}<a href="{{itemImage1.linkUrl}}">{{/if}}
+                <img alt="{{itemImage1.altText}}" src="{{itemImage1.srcUrl}}" width="200" style="max-width:200px;" class="mcnImage">
+              {{#if itemImage1.linkUrl}}</a>{{/if}}
+            {{/if}}
+          </td>
+      </tr>
+      <tr>
+          <td class="mcnTextContent" valign="top" style="padding:0 9px 0 9px;" width="264">
+            {{#if itemHeadline1.isEnabled}}
+                <div style="text-align: center;"><strong>{{itemHeadline1.value}}</strong></div>
+            {{/if}}
+            {{#if itemDescription1.isEnabled}}
+              <div style="text-align: left;">{{{itemDescription1.value}}}</div>
+            {{/if}}
+          </td>
+      </tr>
+  </tbody></table>
+{{/ifAny}}
+<!-- End Featured Brewery 1 -->
 
-<table align="left" border="0" cellpadding="0" cellspacing="0" class="mcnCaptionBottomContent" width="282">
-    <tbody><tr>
-        <td class="mcnCaptionBottomImageContent" align="center" valign="top" style="padding:0 9px 9px 9px;">
-
-
-
-            <img alt="" src="https://gallery.mailchimp.com/f2c55751eba8c8a6bb94f9133/images/06eb2608-d46f-4ee0-9668-a3b6e22b4867.png" width="200" style="max-width:200px;" class="mcnImage">
-
-
-        </td>
-    </tr>
-    <tr>
-        <td class="mcnTextContent" valign="top" style="padding:0 9px 0 9px;" width="264">
-            <div style="text-align: center;"><strong>Sun King Brewery</strong></div>
-
-<div style="text-align: left;">We are thrilled to welcome Indianapolis-based Sun King Brewery into our portfolio of beers. More info below.</div>
-
-        </td>
-    </tr>
-</tbody></table>
-
+<!-- Featured Brewery 2 -->
 <table align="right" border="0" cellpadding="0" cellspacing="0" class="mcnCaptionBottomContent" width="282">
     <tbody><tr>
         <td class="mcnCaptionBottomImageContent" align="center" valign="top" style="padding:0 9px 9px 9px;">
@@ -566,10 +571,7 @@
         </td>
     </tr>
 </tbody></table>
-
-
-
-
+<!-- End Featured Brewery 2 -->
 
             </td>
         </tr>
@@ -579,7 +581,7 @@
         <tr>
             <td class="mcnCaptionBlockInner" valign="top" style="padding:9px;">
 
-
+<!-- Featured Brewery 3 -->
 <table align="left" border="0" cellpadding="0" cellspacing="0" class="mcnCaptionBottomContent" width="282">
     <tbody><tr>
         <td class="mcnCaptionBottomImageContent" align="center" valign="top" style="padding:0 9px 9px 9px;">
@@ -600,7 +602,9 @@
         </td>
     </tr>
 </tbody></table>
+<!-- End Featured Brewery 3 -->
 
+<!-- Featured Brewery 4 -->
 <table align="right" border="0" cellpadding="0" cellspacing="0" class="mcnCaptionBottomContent" width="282">
     <tbody><tr>
         <td class="mcnCaptionBottomImageContent" align="center" valign="top" style="padding:0 9px 9px 9px;">
@@ -621,10 +625,7 @@
         </td>
     </tr>
 </tbody></table>
-
-
-
-
+<!-- End Featured Brewery 4 -->
 
             </td>
         </tr>
@@ -2770,6 +2771,11 @@ Various Locations</div>
                         <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
 
                             <em>Copyright © 2016</em>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            {{{System.OptOutText}}}
                         </td>
                     </tr>
                 </tbody></table>
