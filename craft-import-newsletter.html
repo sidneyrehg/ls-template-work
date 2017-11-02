@@ -656,6 +656,8 @@
 </table>
 
 <!-- Start Supplier Spotlight -->
+{{#ifAny itemImage5.isEnabled itemHeadline5.isEnabled itemDescription5.isEnabled itemButton5.isEnabled}}
+{{#if itemHeadline5.isEnabled}}
 <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnButtonBlock" style="min-width:100%;">
     <tbody class="mcnButtonBlockOuter">
         <tr>
@@ -664,7 +666,7 @@
                     <tbody>
                         <tr>
                             <td align="center" valign="middle" class="mcnButtonContent" style="font-family: Verdana, Geneva, sans-serif; font-size: 16px; padding: 14px;">
-                                <a class="mcnButton " title="SUPPLIER SPOTLIGHT: SUN KING BREWERY" href="http://" target="_self" style="font-weight: bold;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">SUPPLIER SPOTLIGHT: SUN KING BREWERY</a>
+                                <a class="mcnButton " title="{{itemHeadline5.value}}" href="{{#if itemHeadline5.linkUrl}}{{itemHeadline5.linkUrl}}{{/if}}" target="_self" style="font-weight: bold;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">{{itemHeadline5.value}}</a>
                             </td>
                         </tr>
                     </tbody>
@@ -673,23 +675,24 @@
         </tr>
     </tbody>
 </table>
+{{/if}}
 
 <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnCaptionBlock">
     <tbody class="mcnCaptionBlockOuter">
         <tr>
             <td class="mcnCaptionBlockInner" valign="top" style="padding:9px;">
 
-
+{{#if itemImage5.isEnabled}}
 <table align="left" border="0" cellpadding="0" cellspacing="0" class="mcnCaptionBottomContent" width="false">
     <tbody><tr>
         <td class="mcnCaptionBottomImageContent" align="center" valign="top" style="padding:0 9px 9px 9px;">
 
 
-            <a href="https://www.handfamilycompanies.com/blog/introducing-sun-king-brewery/" title="" class="" target="_blank">
+            {{#if itemImage5.linkUrl}}<a href="{{itemImage5.linkUrl}}" title="" class="" target="_blank">{{/if}}
 
 
-            <img alt="" src="https://gallery.mailchimp.com/f2c55751eba8c8a6bb94f9133/images/e0d89452-8f6e-4f3c-a4e6-1e9e830ffddc.png" width="564" style="max-width:859px;" class="mcnImage">
-            </a>
+            <img alt="{{itemImage5.altText}}" src="{{itemImage5.srcUrl}}" width="564" style="max-width:859px;" class="mcnImage">
+            {{#if itemImage5.linkUrl}}</a>{{/if}}
 
         </td>
     </tr>
@@ -699,34 +702,33 @@
         </td>
     </tr>
 </tbody></table>
-
-
-
-
+{{/if}}
 
             </td>
         </tr>
     </tbody>
-</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width:100%;">
+</table>
+
+{{#if itemDescription5.isEnabled}}
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width:100%;">
     <tbody class="mcnTextBlockOuter">
         <tr>
             <td valign="top" class="mcnTextBlockInner" style="padding-top:9px;">
                 <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
                     <tbody><tr>
-
                         <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
-
-                            <div style="text-align: left;">Indianapolis-based Sun King Brewery will be distributing their beers outside of Indiana for this first time ever beginning Monday, August 21. Founded in 2009 by Clay Robinson and Dave Colt, Sun King is now the second-largest brewery in Indiana, producing about 35,000 bbls of beer in 2016.<br>
-<br>
-They are well-known for their Sunlight Cream Ale, a GABF gold medal winning cream ale, along with their line of IPAs, barrel-aged beers, and sours.</div>
-
+                            <div style="text-align: left;">{{{itemDescription5.value}}}</div>
                         </td>
                     </tr>
                 </tbody></table>
             </td>
         </tr>
     </tbody>
-</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnButtonBlock" style="min-width:100%;">
+</table>
+{{/if}}
+
+{{#if itemButton5.isEnabled}}
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnButtonBlock" style="min-width:100%;">
     <tbody class="mcnButtonBlockOuter">
         <tr>
             <td style="padding-top:0; padding-right:18px; padding-bottom:18px; padding-left:18px;" valign="top" align="center" class="mcnButtonBlockInner">
@@ -734,7 +736,7 @@ They are well-known for their Sunlight Cream Ale, a GABF gold medal winning crea
                     <tbody>
                         <tr>
                             <td align="center" valign="middle" class="mcnButtonContent" style="font-family: Verdana, Geneva, sans-serif; font-size: 16px; padding: 10px;">
-                                <a class="mcnButton " title="Learn More About Sun King" href="https://www.handfamilycompanies.com/blog/introducing-sun-king-brewery/" target="_self" style="font-weight: normal;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">Learn More About Sun King</a>
+                                {{#if itemButton5.linkUrl}}<a class="mcnButton " title="{{itemButton5.value}}" href="{{itemButton5.linkUrl}}" target="_self" style="font-weight: normal;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">{{/if}}{{itemButton5.value}}{{#if itemButton5.linkUrl}}</a>{{/if}}
                             </td>
                         </tr>
                     </tbody>
@@ -743,11 +745,7 @@ They are well-known for their Sunlight Cream Ale, a GABF gold medal winning crea
         </tr>
     </tbody>
 </table>
-<!-- End Supplier Spotlight -->
-
-<!-- Include the bottom divider bar with spotlight content area -->
-
-<!-- Dotted line divider below unlimited new product items. Allow it to be disabled. -->
+{{/if}}
 
 <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnDividerBlock" style="min-width:100%;">
     <tbody class="mcnDividerBlockOuter">
@@ -763,7 +761,16 @@ They are well-known for their Sunlight Cream Ale, a GABF gold medal winning crea
             </td>
         </tr>
     </tbody>
-</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnButtonBlock" style="min-width:100%;">
+</table>
+{{/ifAny}}
+
+<!-- End Supplier Spotlight -->
+
+<!-- Include the bottom divider bar with spotlight content area -->
+
+<!-- Dotted line divider below unlimited new product items. Allow it to be disabled. -->
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnButtonBlock" style="min-width:100%;">
     <tbody class="mcnButtonBlockOuter">
         <tr>
             <td style="padding-top:0; padding-right:18px; padding-bottom:18px; padding-left:18px;" valign="top" align="center" class="mcnButtonBlockInner">
