@@ -440,7 +440,7 @@
                             <td class="mcnImageContent" valign="top" style="padding-right: 0px; padding-left: 0px; padding-top: 0; padding-bottom: 0;">
 
                                     <a href="http://www.lakeshorebev.com" title="" class="" target="_blank">
-                                        <img align="left" alt="Lakeshore Beverage" src="https://gallery.mailchimp.com/f2c55751eba8c8a6bb94f9133/images/669517a1-efa9-46b2-adfe-38e7c9529c1e.png" width="600" style="max-width:800px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
+                                        <img align="left" alt="Lakeshore Beverage" src="http://files.secondstreetmedia.com/support/sidneyr/669517a1-efa9-46b2-adfe-38e7c9529c1e.png" width="600" style="max-width:800px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
                                     </a>
 
                             </td>
@@ -873,7 +873,7 @@
     </tbody>
 </table>
 
-<!-- End infinite items -->
+<!-- End infinite items - Product -->
 {{/ifAny}}
 {{/each}}
 {{/if}}
@@ -914,7 +914,15 @@
             </td>
         </tr>
     </tbody>
-</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width:100%;">
+</table>
+
+<!-- Start Training Section -->
+
+{{#if newtraining.areAnyContentsEnabled}}
+  {{#each newtraining.contents as |nt|}}
+    {{#ifAny nt.srcUrl nt.itemTitle nt.value nt.itemButtonText}}
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width:100%;">
     <tbody class="mcnTextBlockOuter">
         <tr>
             <td valign="top" class="mcnTextBlockInner" style="padding-top:9px;">
@@ -923,14 +931,9 @@
 
                         <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
 
-                            <h2 class="null" style="text-align: center;"><span style="font-size:18px"><strong>Thirsty Thursdays</strong></span></h2>
-&nbsp;
-
-<div style="text-align: center;"><strong>August 17 -&nbsp;</strong>Elizabeth Street<br>
-&nbsp;</div>
-
-<div style="text-align: left;">Ken Valek will guest star in this edition of Thirsty Thursdays, going over our new brewery partners, Sun King.</div>
-
+                            <h2 class="null" style="text-align: center;"><span style="font-size:18px"><strong>{{nt.itemTitle}}</strong></span></h2>
+                            &nbsp;
+                            {{{nt.value}}}
                         </td>
                     </tr>
                 </tbody></table>
@@ -945,7 +948,7 @@
                     <tbody>
                         <tr>
                             <td align="center" valign="middle" class="mcnButtonContent" style="font-family: Verdana, Geneva, sans-serif; font-size: 16px; padding: 10px;">
-                                <a class="mcnButton " title="RSVP To Thirsty Thursday" href="https://lakeshorebeverage.formstack.com/forms/lsb_thirsty_thursday_rsvp" target="_self" style="font-weight: normal;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">RSVP To Thirsty Thursday</a>
+                                {{if nt.itemButtonLinkURL}}<a class="mcnButton " title="{{nt.itemButtonText}}" href="{{nt.itemButtonLinkUrl}}" target="_self" style="font-weight: normal;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">{{/if}}{{nt.itemButtonText}}{{if nt.itemButtonLinkUrl}}</a>{{/if}}
                             </td>
                         </tr>
                     </tbody>
@@ -953,7 +956,9 @@
             </td>
         </tr>
     </tbody>
-</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnDividerBlock" style="min-width:100%;">
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnDividerBlock" style="min-width:100%;">
     <tbody class="mcnDividerBlockOuter">
         <tr>
             <td class="mcnDividerBlockInner" style="min-width:100%; padding:18px;">
@@ -967,7 +972,14 @@
             </td>
         </tr>
     </tbody>
-</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock" style="min-width:100%;">
+</table>
+
+<!-- End infinite items - Training -->
+{{/ifAny}}
+{{/each}}
+{{/if}}
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock" style="min-width:100%;">
     <tbody class="mcnImageBlockOuter">
             <tr>
                 <td valign="top" style="padding:9px" class="mcnImageBlockInner">
@@ -976,7 +988,7 @@
                             <td class="mcnImageContent" valign="top" style="padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0; text-align:center;">
 
                                     <a href="https://www.dropbox.com/sh/ayhv26dgepcxyzo/AAByfeSIYl_4Zl-Wn_0Im5TDa?dl=0" title="" class="" target="_blank">
-                                        <img align="center" alt="" src="https://gallery.mailchimp.com/f2c55751eba8c8a6bb94f9133/images/99bbaf5d-c8a3-466e-9720-85c98f3594fa.jpg" width="564.0000076293945" style="max-width:1024px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
+                                        <img align="center" alt="" src="http://files.secondstreetmedia.com/support/sidneyr/99bbaf5d-c8a3-466e-9720-85c98f3594fa.jpg" width="564.0000076293945" style="max-width:1024px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
                                     </a>
 
                             </td>
@@ -1018,7 +1030,11 @@
             </td>
         </tr>
     </tbody>
-</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnDividerBlock" style="min-width:100%;">
+</table>
+
+<!-- End Training Section -->
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnDividerBlock" style="min-width:100%;">
     <tbody class="mcnDividerBlockOuter">
         <tr>
             <td class="mcnDividerBlockInner" style="min-width:100%; padding:18px;">
@@ -1032,7 +1048,15 @@
             </td>
         </tr>
     </tbody>
-</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnButtonBlock" style="min-width:100%;">
+</table>
+
+<!-- Start Events Section -->
+
+{{#if newevent.areAnyContentsEnabled}}
+  {{#each newevent.contents as |ne|}}
+    {{#ifAny ne.srcUrl ne.itemTitle ne.value ne.itemButtonText}}
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnButtonBlock" style="min-width:100%;">
     <tbody class="mcnButtonBlockOuter">
         <tr>
             <td style="padding-top:0; padding-right:18px; padding-bottom:18px; padding-left:18px;" valign="top" align="center" class="mcnButtonBlockInner">
@@ -1048,7 +1072,9 @@
             </td>
         </tr>
     </tbody>
-</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnCaptionBlock">
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnCaptionBlock">
     <tbody class="mcnCaptionBlockOuter">
         <tr>
             <td class="mcnCaptionBlockInner" valign="top" style="padding:9px;">
@@ -1059,36 +1085,30 @@
         <td class="mcnCaptionBottomImageContent" align="center" valign="top" style="padding:0 9px 9px 9px;">
 
 
-            <a href="https://www.handfamilycompanies.com/founders-green-zebra-tapping-and-party" title="" class="" target="_blank">
+            {{#if ne.itemImageLinkUrl}}<a href="{{ne.itemImageLinkUrl}}" title="" class="" target="_blank">{{/if}}
 
 
-            <img alt="" src="https://gallery.mailchimp.com/f2c55751eba8c8a6bb94f9133/images/09b7f830-7ab8-495b-ba0f-82651b2f2c0d.jpg" width="564" style="max-width:800px;" class="mcnImage">
-            </a>
+            <img alt="{{ne.altText}}" src="{{ic.srcUrl}}" width="564" style="max-width:800px;" class="mcnImage">
+            {{#if ne.itemImageLinkUrl}}</a>{{/if}}
 
         </td>
     </tr>
     <tr>
-        <td class="mcnTextContent" valign="top" style="padding:0 9px 0 9px;" width="564">
-            <div style="text-align: center;"><strong>Founders Green Zebra Release Party</strong><br>
-Wednesday, August 16&nbsp;@ 7pm<br>
-Rocking Horse | 2535 N Milwaukee Ave</div>
+      <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
 
-<div style="text-align: center;">&nbsp;</div>
-
-<div style="text-align: left;">Join the Founders crew at Rocking Horse in Logan Square for the release of their newest beer, Green Zebra Watermelon Gose.&nbsp;</div>
-
-        </td>
+          <h2 class="null" style="text-align: center;"><span style="font-size:18px"><strong>{{ne.itemTitle}}</strong></span></h2>
+          &nbsp;
+          {{{ne.value}}}
+      </td>
     </tr>
 </tbody></table>
-
-
-
-
 
             </td>
         </tr>
     </tbody>
-</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnButtonBlock" style="min-width:100%;">
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnButtonBlock" style="min-width:100%;">
     <tbody class="mcnButtonBlockOuter">
         <tr>
             <td style="padding-top:0; padding-right:18px; padding-bottom:18px; padding-left:18px;" valign="top" align="center" class="mcnButtonBlockInner">
@@ -1096,7 +1116,7 @@ Rocking Horse | 2535 N Milwaukee Ave</div>
                     <tbody>
                         <tr>
                             <td align="center" valign="middle" class="mcnButtonContent" style="font-family: Verdana, Geneva, sans-serif; font-size: 16px; padding: 10px;">
-                                <a class="mcnButton " title="More Information" href="https://www.handfamilycompanies.com/founders-green-zebra-tapping-and-party" target="_self" style="font-weight: normal;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">More Information</a>
+                                {{if ne.itemButtonLinkURL}}<a class="mcnButton " title="{{ne.itemButtonText}}" href="{{ne.itemButtonLinkUrl}}" target="_self" style="font-weight: normal;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">{{/if}}{{ne.itemButtonText}}{{if ne.itemButtonLinkURL}}</a>{{/if}}
                             </td>
                         </tr>
                     </tbody>
@@ -1104,7 +1124,9 @@ Rocking Horse | 2535 N Milwaukee Ave</div>
             </td>
         </tr>
     </tbody>
-</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnDividerBlock" style="min-width:100%;">
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnDividerBlock" style="min-width:100%;">
     <tbody class="mcnDividerBlockOuter">
         <tr>
             <td class="mcnDividerBlockInner" style="min-width:100%; padding:18px;">
@@ -1118,63 +1140,17 @@ Rocking Horse | 2535 N Milwaukee Ave</div>
             </td>
         </tr>
     </tbody>
-</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnCaptionBlock">
-    <tbody class="mcnCaptionBlockOuter">
-        <tr>
-            <td class="mcnCaptionBlockInner" valign="top" style="padding:9px;">
+</table>
 
+<!-- End Infinite Items - Events -->
 
-<table align="left" border="0" cellpadding="0" cellspacing="0" class="mcnCaptionBottomContent" width="false">
-    <tbody><tr>
-        <td class="mcnCaptionBottomImageContent" align="center" valign="top" style="padding:0 9px 9px 9px;">
+{{/ifAny}}
+{{/each}}
+{{/if}}
 
+<!-- End Events Section -->
 
-            <a href="https://www.handfamilycompanies.com/events#facets=a%3A1%3A%7Bi%3A20%3Bs%3A3%3A%22849%22%3B%7D&amp;options=a%3A25%3A%7Bs%3A11%3A%22classPrefix%22%3Bs%3A14%3A%22EventsDropdown%22%3Bs%3A8%3A%22listType%22%3Bs%3A22%3A%22Joined%20Faceted%20Results%22%3Bs%3A11%3A%22enableCache%22%3Bb%3A1%3Bs%3A5%3A%22limit%22%3Bi%3A999999%3Bs%3A6%3A%22offset%22%3Bi%3A0%3Bs%3A10%3A%22searchTerm%22%3Bs%3A0%3A%22%22%3Bs%3A7%3A%22locator%22%3Ba%3A0%3A%7B%7Ds%3A6%3A%22pageID%22%3Bs%3A2%3A%2229%22%3Bs%3A10%3A%22pageOffset%22%3Bi%3A0%3Bs%3A13%3A%22resultsPerRow%22%3Bi%3A1%3Bs%3A14%3A%22resultsPerPage%22%3Bs%3A1%3A%225%22%3Bs%3A9%3A%22className%22%3Bs%3A0%3A%22%22%3Bs%3A13%3A%22useBaseFacets%22%3Bb%3A1%3Bs%3A10%3A%22resultsSQL%22%3Bs%3A0%3A%22%22%3Bs%3A15%3A%22resultCountsSQL%22%3Bs%3A0%3A%22%22%3Bs%3A13%3A%22displayFacets%22%3Bb%3A1%3Bs%3A13%3A%22displaySearch%22%3Bb%3A0%3Bs%3A17%3A%22disableSearchHTML%22%3Bb%3A0%3Bs%3A10%3A%22displayMap%22%3Bb%3A0%3Bs%3A20%3A%22displayLocatorSearch%22%3Bb%3A0%3Bs%3A18%3A%22defaultSearchValue%22%3Bs%3A30%3A%22Optional%20Name%20%2F%20Keyword%20Search%22%3Bs%3A15%3A%22defaultZipValue%22%3Bs%3A23%3A%22Zip%20Code%20or%20City%2C%20State%22%3Bs%3A10%3A%22locationID%22%3Bs%3A0%3A%22%22%3Bs%3A6%3A%22distID%22%3Bs%3A2%3A%2215%22%3Bs%3A12%3A%22newTableName%22%3Bs%3A14%3A%22calendar_event%22%3B%7D&amp;do=changeFacet" title="" class="" target="_blank">
-
-
-            <img alt="" src="https://gallery.mailchimp.com/f2c55751eba8c8a6bb94f9133/images/07474f13-f4ac-4416-99ef-a85c4d7212cd.jpg" width="564" style="max-width:800px;" class="mcnImage">
-            </a>
-
-        </td>
-    </tr>
-    <tr>
-        <td class="mcnTextContent" valign="top" style="padding:0 9px 0 9px;" width="564">
-            <div style="text-align: center;"><strong>Sun King Brewery Launch Events</strong><br>
-Monday - Wednesday, August 21-23<br>
-Various Locations</div>
-
-<div style="text-align: center;">&nbsp;</div>
-
-<div style="text-align: left;">Please join us for the launch events for Sun King Brewery next week. See the list of events <a href="https://www.handfamilycompanies.com/events#facets=a%3A1%3A%7Bi%3A20%3Bs%3A3%3A%22849%22%3B%7D&amp;options=a%3A25%3A%7Bs%3A11%3A%22classPrefix%22%3Bs%3A14%3A%22EventsDropdown%22%3Bs%3A8%3A%22listType%22%3Bs%3A22%3A%22Joined%20Faceted%20Results%22%3Bs%3A11%3A%22enableCache%22%3Bb%3A1%3Bs%3A5%3A%22limit%22%3Bi%3A999999%3Bs%3A6%3A%22offset%22%3Bi%3A0%3Bs%3A10%3A%22searchTerm%22%3Bs%3A0%3A%22%22%3Bs%3A7%3A%22locator%22%3Ba%3A0%3A%7B%7Ds%3A6%3A%22pageID%22%3Bs%3A2%3A%2229%22%3Bs%3A10%3A%22pageOffset%22%3Bi%3A0%3Bs%3A13%3A%22resultsPerRow%22%3Bi%3A1%3Bs%3A14%3A%22resultsPerPage%22%3Bs%3A1%3A%225%22%3Bs%3A9%3A%22className%22%3Bs%3A0%3A%22%22%3Bs%3A13%3A%22useBaseFacets%22%3Bb%3A1%3Bs%3A10%3A%22resultsSQL%22%3Bs%3A0%3A%22%22%3Bs%3A15%3A%22resultCountsSQL%22%3Bs%3A0%3A%22%22%3Bs%3A13%3A%22displayFacets%22%3Bb%3A1%3Bs%3A13%3A%22displaySearch%22%3Bb%3A0%3Bs%3A17%3A%22disableSearchHTML%22%3Bb%3A0%3Bs%3A10%3A%22displayMap%22%3Bb%3A0%3Bs%3A20%3A%22displayLocatorSearch%22%3Bb%3A0%3Bs%3A18%3A%22defaultSearchValue%22%3Bs%3A30%3A%22Optional%20Name%20%2F%20Keyword%20Search%22%3Bs%3A15%3A%22defaultZipValue%22%3Bs%3A23%3A%22Zip%20Code%20or%20City%2C%20State%22%3Bs%3A10%3A%22locationID%22%3Bs%3A0%3A%22%22%3Bs%3A6%3A%22distID%22%3Bs%3A2%3A%2215%22%3Bs%3A12%3A%22newTableName%22%3Bs%3A14%3A%22calendar_event%22%3B%7D&amp;do=changeFacet" target="_blank">HERE</a>.</div>
-
-        </td>
-    </tr>
-</tbody></table>
-
-
-
-
-
-            </td>
-        </tr>
-    </tbody>
-</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnButtonBlock" style="min-width:100%;">
-    <tbody class="mcnButtonBlockOuter">
-        <tr>
-            <td style="padding-top:0; padding-right:18px; padding-bottom:18px; padding-left:18px;" valign="top" align="center" class="mcnButtonBlockInner">
-                <table border="0" cellpadding="0" cellspacing="0" class="mcnButtonContentContainer" style="border-collapse: separate !important;border: 2px solid #BA8E41;background-color: #C89641;">
-                    <tbody>
-                        <tr>
-                            <td align="center" valign="middle" class="mcnButtonContent" style="font-family: Verdana, Geneva, sans-serif; font-size: 16px; padding: 10px;">
-                                <a class="mcnButton " title="Sun King Launch Events" href="https://www.handfamilycompanies.com/events#facets=a%3A1%3A%7Bi%3A20%3Bs%3A3%3A%22849%22%3B%7D&amp;options=a%3A25%3A%7Bs%3A11%3A%22classPrefix%22%3Bs%3A14%3A%22EventsDropdown%22%3Bs%3A8%3A%22listType%22%3Bs%3A22%3A%22Joined%20Faceted%20Results%22%3Bs%3A11%3A%22enableCache%22%3Bb%3A1%3Bs%3A5%3A%22limit%22%3Bi%3A999999%3Bs%3A6%3A%22offset%22%3Bi%3A0%3Bs%3A10%3A%22searchTerm%22%3Bs%3A0%3A%22%22%3Bs%3A7%3A%22locator%22%3Ba%3A0%3A%7B%7Ds%3A6%3A%22pageID%22%3Bs%3A2%3A%2229%22%3Bs%3A10%3A%22pageOffset%22%3Bi%3A0%3Bs%3A13%3A%22resultsPerRow%22%3Bi%3A1%3Bs%3A14%3A%22resultsPerPage%22%3Bs%3A1%3A%225%22%3Bs%3A9%3A%22className%22%3Bs%3A0%3A%22%22%3Bs%3A13%3A%22useBaseFacets%22%3Bb%3A1%3Bs%3A10%3A%22resultsSQL%22%3Bs%3A0%3A%22%22%3Bs%3A15%3A%22resultCountsSQL%22%3Bs%3A0%3A%22%22%3Bs%3A13%3A%22displayFacets%22%3Bb%3A1%3Bs%3A13%3A%22displaySearch%22%3Bb%3A0%3Bs%3A17%3A%22disableSearchHTML%22%3Bb%3A0%3Bs%3A10%3A%22displayMap%22%3Bb%3A0%3Bs%3A20%3A%22displayLocatorSearch%22%3Bb%3A0%3Bs%3A18%3A%22defaultSearchValue%22%3Bs%3A30%3A%22Optional%20Name%20%2F%20Keyword%20Search%22%3Bs%3A15%3A%22defaultZipValue%22%3Bs%3A23%3A%22Zip%20Code%20or%20City%2C%20State%22%3Bs%3A10%3A%22locationID%22%3Bs%3A0%3A%22%22%3Bs%3A6%3A%22distID%22%3Bs%3A2%3A%2215%22%3Bs%3A12%3A%22newTableName%22%3Bs%3A14%3A%22calendar_event%22%3B%7D&amp;do=changeFacet" target="_self" style="font-weight: normal;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">Sun King Launch Events</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-        </tr>
-    </tbody>
-</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnDividerBlock" style="min-width:100%;">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnDividerBlock" style="min-width:100%;">
     <tbody class="mcnDividerBlockOuter">
         <tr>
             <td class="mcnDividerBlockInner" style="min-width:100%; padding:18px;">
@@ -1188,7 +1164,11 @@ Various Locations</div>
             </td>
         </tr>
     </tbody>
-</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width:100%;">
+</table>
+
+<!-- Start Footer -->
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width:100%;">
     <tbody class="mcnTextBlockOuter">
         <tr>
             <td valign="top" class="mcnTextBlockInner" style="padding-top:9px;">
@@ -1268,7 +1248,7 @@ Various Locations</div>
 
                                                 <tbody><tr>
                                                     <td align="center" valign="top" class="mcnFollowIconContent" style="padding-right:10px; padding-bottom:5px;">
-                                                        <a href="https://www.facebook.com/lakeshorebeverage" target="_blank"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-facebook-96.png" alt="Facebook" class="mcnFollowBlockIcon" width="48" style="width:48px; max-width:48px; display:block;"></a>
+                                                        <a href="https://www.facebook.com/lakeshorebeverage" target="_blank"><img src="http://files.secondstreetmedia.com/support/sidneyr/color-facebook-96.png" alt="Facebook" class="mcnFollowBlockIcon" width="48" style="width:48px; max-width:48px; display:block;"></a>
                                                     </td>
                                                 </tr>
 
@@ -1285,7 +1265,7 @@ Various Locations</div>
 
                                                 <tbody><tr>
                                                     <td align="center" valign="top" class="mcnFollowIconContent" style="padding-right:10px; padding-bottom:5px;">
-                                                        <a href="https://twitter.com/lakeshorebev" target="_blank"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-96.png" alt="Twitter" class="mcnFollowBlockIcon" width="48" style="width:48px; max-width:48px; display:block;"></a>
+                                                        <a href="https://twitter.com/lakeshorebev" target="_blank"><img src="http://files.secondstreetmedia.com/support/sidneyr/color-twitter-96.png" alt="Twitter" class="mcnFollowBlockIcon" width="48" style="width:48px; max-width:48px; display:block;"></a>
                                                     </td>
                                                 </tr>
 
@@ -1302,7 +1282,7 @@ Various Locations</div>
 
                                                 <tbody><tr>
                                                     <td align="center" valign="top" class="mcnFollowIconContent" style="padding-right:0; padding-bottom:5px;">
-                                                        <a href="http://instagram.com/lakeshorebeverage/" target="_blank"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-instagram-96.png" alt="Instagram" class="mcnFollowBlockIcon" width="48" style="width:48px; max-width:48px; display:block;"></a>
+                                                        <a href="http://instagram.com/lakeshorebeverage/" target="_blank"><img src="http://files.secondstreetmedia.com/support/sidneyr/color-instagram-96.png" alt="Instagram" class="mcnFollowBlockIcon" width="48" style="width:48px; max-width:48px; display:block;"></a>
                                                     </td>
                                                 </tr>
 
@@ -1374,7 +1354,7 @@ Various Locations</div>
 
                         <td valign="top" class="mcnTextContent" style="padding: 9px 0px 9px 18px;color: #BA8E41;">
 
-                            <img align="none" height="29" src="https://gallery.mailchimp.com/f2c55751eba8c8a6bb94f9133/images/a30054a5-7dc9-4d73-91da-b44919dc5255.jpg" style="width: 252px; height: 29px; margin: 0px;" width="252">
+                            <img align="none" height="29" src="http://files.secondstreetmedia.com/support/sidneyr/a30054a5-7dc9-4d73-91da-b44919dc5255.jpg" style="width: 252px; height: 29px; margin: 0px;" width="252">
                         </td>
                     </tr>
                 </tbody></table>
