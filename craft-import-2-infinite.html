@@ -1052,10 +1052,6 @@
 
 <!-- Start Events Section -->
 
-{{#if newevent.areAnyContentsEnabled}}
-  {{#each newevent.contents as |ne|}}
-    {{#ifAny ne.srcUrl ne.itemTitle ne.value ne.itemButtonText}}
-
 <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnButtonBlock" style="min-width:100%;">
     <tbody class="mcnButtonBlockOuter">
         <tr>
@@ -1074,11 +1070,14 @@
     </tbody>
 </table>
 
+{{#if newevent.areAnyContentsEnabled}}
+  {{#each newevent.contents as |ne|}}
+    {{#ifAny ne.srcUrl ne.itemTitle ne.value ne.itemButtonText}}
+
 <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnCaptionBlock">
     <tbody class="mcnCaptionBlockOuter">
         <tr>
             <td class="mcnCaptionBlockInner" valign="top" style="padding:9px;">
-
 
 <table align="left" border="0" cellpadding="0" cellspacing="0" class="mcnCaptionBottomContent" width="false">
     <tbody><tr>
