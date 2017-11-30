@@ -787,95 +787,89 @@
 </table>
 
 {{#if newproduct.areAnyContentsEnabled}}
-  {{#each newproduct.contents as |np|}}
-    {{#ifAny np.srcUrl np.value np.itemButtonText}}
+  {{#each (filter-by newproduct.contents "isEnabled" true) as |np|}}
 
-<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnCaptionBlock">
-    <tbody class="mcnCaptionBlockOuter">
-        <tr>
+    {{#ifAny np.srcUrl np.srcUrl np.value}}
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnCaptionBlock">
+        <tbody class="mcnCaptionBlockOuter">
+          <tr>
             <td class="mcnCaptionBlockInner" valign="top" style="padding:9px;">
-
-
-<table border="0" cellpadding="0" cellspacing="0" class="mcnCaptionRightContentOuter" width="100%">
-    <tbody><tr>
-        <td valign="top" class="mcnCaptionRightContentInner" style="padding:0 9px ;">
-            <table align="left" border="0" cellpadding="0" cellspacing="0" class="mcnCaptionRightImageContentContainer">
-                <tbody><tr>
-                    <td class="mcnCaptionRightImageContent" valign="top">
-
-
-
-                        <img alt="{{np.altText}}" src="{{np.srcUrl}}" width="176" style="max-width:399px;" class="mcnImage">
-
-
-
+              <table border="0" cellpadding="0" cellspacing="0" class="mcnCaptionRightContentOuter" width="100%">
+                <tbody>
+                  <tr>
+                    <td valign="top" class="mcnCaptionRightContentInner" style="padding:0 9px ;">
+                      <table align="left" border="0" cellpadding="0" cellspacing="0" class="mcnCaptionRightImageContentContainer">
+                        <tbody>
+                          <tr>
+                            <td class="mcnCaptionRightImageContent" valign="top">
+                              <img alt="{{np.altText}}" src="{{np.srcUrl}}" width="176" style="max-width:399px;" class="mcnImage">
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <table class="mcnCaptionRightTextContentContainer" align="right" border="0" cellpadding="0" cellspacing="0" width="352">
+                        <tbody>
+                          <tr>
+                            <td valign="top" class="mcnTextContent" style="text-align: left;">
+                              <div style="text-align: left;">
+                                {{{np.value}}}
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </td>
-                </tr>
-            </tbody>
-          </table>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    {{/ifAny}}
 
-            <table class="mcnCaptionRightTextContentContainer" align="right" border="0" cellpadding="0" cellspacing="0" width="352">
-                <tbody><tr>
-                    <td valign="top" class="mcnTextContent" style="text-align: left;">
-
-<div style="text-align: left;">
-  {{{np.value}}}
-</div>
-
-                    </td>
-                </tr>
+{{#if np.itemButtonText}}
+  <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnButtonBlock" style="min-width:100%;">
+    <tbody class="mcnButtonBlockOuter">
+      <tr>
+        <td style="padding-top:0; padding-right:18px; padding-bottom:18px; padding-left:18px;" valign="top" align="center" class="mcnButtonBlockInner">
+          <table border="0" cellpadding="0" cellspacing="0" class="mcnButtonContentContainer" style="border-collapse: separate !important;border: 2px solid #BA8E41;background-color: #C89641;">
+            <tbody>
+              <tr>
+                <td align="center" valign="middle" class="mcnButtonContent" style="font-family: Verdana, Geneva, sans-serif; font-size: 16px; padding: 10px;">
+                  {{#if np.itemButtonLinkUrl}}<a class="mcnButton " title="{{np.itemButtonText}}" href="{{np.itemButtonLinkUrl}}" target="_self" style="font-weight: normal;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">{{/if}}{{np.itemButtonText}}{{#if np.itemButtonLinkUrl}}</a>{{/if}}
+                </td>
+              </tr>
             </tbody>
           </table>
         </td>
-    </tr>
-</tbody></table>
-
-            </td>
-        </tr>
+      </tr>
     </tbody>
-</table>
+  </table>
+{{/if}}
 
-{{#ifEvery newproduct.isButtonEnabled np.itemButtonText}}
-<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnButtonBlock" style="min-width:100%;">
-    <tbody class="mcnButtonBlockOuter">
-        <tr>
-            <td style="padding-top:0; padding-right:18px; padding-bottom:18px; padding-left:18px;" valign="top" align="center" class="mcnButtonBlockInner">
-                <table border="0" cellpadding="0" cellspacing="0" class="mcnButtonContentContainer" style="border-collapse: separate !important;border: 2px solid #BA8E41;background-color: #C89641;">
-                    <tbody>
-                        <tr>
-                            <td align="center" valign="middle" class="mcnButtonContent" style="font-family: Verdana, Geneva, sans-serif; font-size: 16px; padding: 10px;">
-                                {{#if np.itemButtonLinkUrl}}<a class="mcnButton " title="{{np.itemButtonText}}" href="{{np.itemButtonLinkUrl}}" target="_self" style="font-weight: normal;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">{{/if}}{{np.itemButtonText}}{{#if np.itemButtonLinkUrl}}</a>{{/if}}
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-        </tr>
-    </tbody>
-</table>
-{{/ifEvery}}
-
-<!-- Header item being used to control dividers for this section -->
-<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnDividerBlock" style="min-width:100%;">
+{{#unless @last}}
+  <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnDividerBlock" style="min-width:100%;">
     <tbody class="mcnDividerBlockOuter">
-        <tr>
-            <td class="mcnDividerBlockInner" style="min-width:100%; padding:18px;">
-                <table class="mcnDividerContent" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;border-top: 2px dotted #666666;">
-                    <tbody><tr>
-                        <td>
-                            <span></span>
-                        </td>
-                    </tr>
-                </tbody></table>
-            </td>
-        </tr>
+      <tr>
+        <td class="mcnDividerBlockInner" style="min-width:100%; padding:18px;">
+          <table class="mcnDividerContent" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;border-top: 2px dotted #666666;">
+            <tbody>
+              <tr>
+                <td>
+                  <span></span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
     </tbody>
-</table>
-
-<!-- End infinite items - Product -->
-{{/ifAny}}
+  </table>
+{{/unless}}
 {{/each}}
 {{/if}}
+<!-- End infinite items - Product -->
 
 <!-- Leave outerblock divider outside of new products -->
 
@@ -962,24 +956,27 @@
       </table>
     {{/if}}
 
-    <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnDividerBlock" style="min-width:100%;">
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnDividerBlock" style="min-width:100%;">
         <tbody class="mcnDividerBlockOuter">
-            <tr>
-                <td class="mcnDividerBlockInner" style="min-width:100%; padding:18px;">
-                    <table class="mcnDividerContent" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;border-top: 2px dotted #666666;">
-                        <tbody><tr>
-                            <td>
-                                <span></span>
-                            </td>
-                        </tr>
-                    </tbody></table>
-                </td>
-            </tr>
+          <tr>
+            <td class="mcnDividerBlockInner" style="min-width:100%; padding:18px;">
+              <table class="mcnDividerContent" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;border-top: 2px dotted #666666;">
+                <tbody>
+                  <tr>
+                    <td>
+                      <span></span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
         </tbody>
-    </table>
-    <!-- End infinite items - Training -->
+      </table>
+
   {{/each}}
 {{/if}}
+<!-- End infinite items - Training -->
 
 <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock" style="min-width:100%;">
     <tbody class="mcnImageBlockOuter">
@@ -1073,81 +1070,77 @@
 </table>
 
 {{#if newevent.areAnyContentsEnabled}}
-  {{#each newevent.contents as |ne|}}
-    {{#ifAny ne.srcUrl ne.itemTitle ne.value ne.itemButtonText}}
+  {{#each (filter-by newevent.contents "isEnabled" true) as |ne|}}
 
-<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnCaptionBlock">
-    <tbody class="mcnCaptionBlockOuter">
-        <tr>
+    {{#ifAny ne.srcUrl ne.itemTitle ne.value}}
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnCaptionBlock">
+        <tbody class="mcnCaptionBlockOuter">
+          <tr>
             <td class="mcnCaptionBlockInner" valign="top" style="padding:9px;">
-
-<table align="left" border="0" cellpadding="0" cellspacing="0" class="mcnCaptionBottomContent" width="false">
-    <tbody><tr>
-        <td class="mcnCaptionBottomImageContent" align="center" valign="top" style="padding:0 9px 9px 9px;">
-
-
-            {{#if ne.itemImageLinkUrl}}<a href="{{ne.itemImageLinkUrl}}" title="" class="" target="_blank">{{/if}}
-
-
-            <img alt="{{ne.altText}}" src="{{ic.srcUrl}}" width="564" style="max-width:800px;" class="mcnImage">
-            {{#if ne.itemImageLinkUrl}}</a>{{/if}}
-
-        </td>
-    </tr>
-    <tr>
-      <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
-
-          <h2 class="null" style="text-align: center;"><span style="font-size:18px"><strong>{{ne.itemTitle}}</strong></span></h2>
-          &nbsp;
-          {{{ne.value}}}
-      </td>
-    </tr>
-</tbody></table>
-
+              <table align="left" border="0" cellpadding="0" cellspacing="0" class="mcnCaptionBottomContent" width="false">
+                <tbody>
+                  <tr>
+                    <td class="mcnCaptionBottomImageContent" align="center" valign="top" style="padding:0 9px 9px 9px;">
+                      {{#if ne.itemImageLinkUrl}}<a href="{{ne.itemImageLinkUrl}}" title="" class="" target="_blank">{{/if}}
+                        <img alt="{{ne.altText}}" src="{{ne.srcUrl}}" width="564" style="max-width:800px;" class="mcnImage">
+                      {{#if ne.itemImageLinkUrl}}</a>{{/if}}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
+                      <h2 class="null" style="text-align: center;"><span style="font-size:18px"><strong>{{ne.itemTitle}}</strong></span></h2>
+                      &nbsp;
+                      {{{ne.value}}}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </td>
-        </tr>
-    </tbody>
-</table>
+          </tr>
+        </tbody>
+      </table>
+    {{/ifAny}}
 
-{{#ifEvery newevent.isButtonEnabled ne.itemButtonText}}
-<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnButtonBlock" style="min-width:100%;">
+{{#if ne.itemButtonText}}
+  <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnButtonBlock" style="min-width:100%;">
     <tbody class="mcnButtonBlockOuter">
-        <tr>
-            <td style="padding-top:0; padding-right:18px; padding-bottom:18px; padding-left:18px;" valign="top" align="center" class="mcnButtonBlockInner">
-                <table border="0" cellpadding="0" cellspacing="0" class="mcnButtonContentContainer" style="border-collapse: separate !important;border: 2px solid #BA8E41;background-color: #C89641;">
-                    <tbody>
-                        <tr>
-                            <td align="center" valign="middle" class="mcnButtonContent" style="font-family: Verdana, Geneva, sans-serif; font-size: 16px; padding: 10px;">
-                                {{#if ne.itemButtonLinkURL}}<a class="mcnButton " title="{{ne.itemButtonText}}" href="{{ne.itemButtonLinkUrl}}" target="_self" style="font-weight: normal;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">{{/if}}{{ne.itemButtonText}}{{#if ne.itemButtonLinkURL}}</a>{{/if}}
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-        </tr>
+      <tr>
+        <td style="padding-top:0; padding-right:18px; padding-bottom:18px; padding-left:18px;" valign="top" align="center" class="mcnButtonBlockInner">
+          <table border="0" cellpadding="0" cellspacing="0" class="mcnButtonContentContainer" style="border-collapse: separate !important;border: 2px solid #BA8E41;background-color: #C89641;">
+            <tbody>
+              <tr>
+                <td align="center" valign="middle" class="mcnButtonContent" style="font-family: Verdana, Geneva, sans-serif; font-size: 16px; padding: 10px;">
+                  {{#if ne.itemButtonLinkURL}}<a class="mcnButton " title="{{ne.itemButtonText}}" href="{{ne.itemButtonLinkUrl}}" target="_self" style="font-weight: normal;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">{{/if}}{{ne.itemButtonText}}{{#if ne.itemButtonLinkURL}}</a>{{/if}}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
     </tbody>
-</table>
-{{/ifEvery}}
+  </table>
+{{/if}}
 
-<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnDividerBlock" style="min-width:100%;">
+{{#unless @last}}
+  <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnDividerBlock" style="min-width:100%;">
     <tbody class="mcnDividerBlockOuter">
-        <tr>
-            <td class="mcnDividerBlockInner" style="min-width:100%; padding:18px;">
-                <table class="mcnDividerContent" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;border-top: 2px dotted #666666;">
-                    <tbody><tr>
-                        <td>
-                            <span></span>
-                        </td>
-                    </tr>
-                </tbody></table>
-            </td>
-        </tr>
+      <tr>
+        <td class="mcnDividerBlockInner" style="min-width:100%; padding:18px;">
+          <table class="mcnDividerContent" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;border-top: 2px dotted #666666;">
+            <tbody>
+              <tr>
+                <td>
+                  <span></span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
     </tbody>
-</table>
+  </table>
+{{/unless}}
 
-<!-- End Infinite Items - Events -->
-
-{{/ifAny}}
 {{/each}}
 {{/if}}
 
