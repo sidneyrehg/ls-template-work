@@ -601,25 +601,27 @@
                                         </table>
                                       {{/ifAny}}
                                     <!-- End Featured Brewery 2 -->
+
                                     <!-- End Feature Row 1 -->
-
                                   </td>
-        </tr>
-    </tbody>
-</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnCaptionBlock">
-    <tbody class="mcnCaptionBlockOuter">
-        <tr>
-            <td class="mcnCaptionBlockInner" valign="top" style="padding:9px;">
+                                </tr>
+                              </tbody>
+                            </table>
 
-<!-- Featured Brewery 3 -->
-{{#ifAny itemImage3.isEnabled itemHeadline3.isEnabled itemDescription3.isEnabled itemButton3.isEnabled}}
-  <table align="left" border="0" cellpadding="0" cellspacing="0" class="mcnCaptionBottomContent" width="282">
-      <tbody><tr>
-          <td class="mcnCaptionBottomImageContent" align="center" valign="top" style="padding:0 9px 9px 9px;">
-            {{#if itemImage3.isEnabled}}
-              {{#if itemImage3.linkUrl}}<a href="{{itemImage3.linkUrl}}">{{/if}}
-                <img alt="{{itemImage3.altText}}" src="{{itemImage3.srcUrl}}" width="200" style="max-width:200px;" class="mcnImage">
-              {{#if itemImage3.linkUrl}}</a>{{/if}}
+                          <!-- Start Feature Row 2 -->
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnCaptionBlock">
+                              <tbody class="mcnCaptionBlockOuter">
+                                <tr>
+                                  <td class="mcnCaptionBlockInner" valign="top" style="padding:9px;">
+
+                                  <!-- Featured Brewery 3 -->
+                                    {{#ifAny itemImage3.isEnabled itemHeadline3.isEnabled itemDescription3.isEnabled itemButton3.isEnabled}}
+                                      <table align="left" border="0" cellpadding="0" cellspacing="0" class="mcnCaptionBottomContent" width="282">
+                                        <tbody>
+                                          <tr>
+                                            <td class="mcnCaptionBottomImageContent" align="center" valign="top" style="padding:0 9px 9px 9px;">
+                                              {{#if itemImage3.isEnabled}}
+                                                {{#if itemImage3.linkUrl}}<a href="{{itemImage3.linkUrl}}">{{/if}}<img alt="{{itemImage3.altText}}" src="{{itemImage3.srcUrl}}" width="200" style="max-width:200px;" class="mcnImage">{{#if itemImage3.linkUrl}}</a>{{/if}}
             {{/if}}
           </td>
       </tr>
@@ -1117,7 +1119,6 @@
                     <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
                       <h2 class="null" style="text-align: center;"><span style="font-size:18px"><strong>{{ne.itemTitle}}</strong></span></h2>
                       &nbsp;
-                      <span style=""
                       {{{ne.value}}}
                     </td>
                   </tr>
